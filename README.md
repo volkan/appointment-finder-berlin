@@ -34,3 +34,8 @@ $ cd appointment-finder-berlin/docker
 $ docker-compose up
 
 ```
+
+### Crontab
+```shell
+* * * * * cd ~/projects/appointment-finder-berlin && /usr/local/bin/docker-compose up
+```
