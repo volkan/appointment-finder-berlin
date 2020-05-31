@@ -11,7 +11,7 @@
 $ git clone https://github.com/volkan/appointment-finder-berlin.git
 Cloning into 'appointment-finder-berlin'...
 
-$ cd appointment-finder-berlin/
+$ cd appointment-finder-berlin/docker
 $ docker-compose up
 
 ```
