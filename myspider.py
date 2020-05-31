@@ -23,6 +23,6 @@ class BerlinAnmeldungSpider(scrapy.Spider):
         urllib.parse.urlencode({
             "token": "pushover_token",
             "user": "pushover_user",
-            "message": "I found a emty slot(s)" +  ' ' + " ".join(days) + ' ' + self.target_url,
+            "message": "I found an empty slot(s)" +  ' ' + " ".join(days) + ' ' + self.target_url,
         }), { "Content-type": "application/x-www-form-urlencoded" })
         conn.getresponse()

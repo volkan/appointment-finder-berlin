@@ -1,10 +1,10 @@
-# Berlin Apointment Finder
+# Berlin Appointment Finder
 
 ## How can I use:
 
     * [Find type of apointment](https://service.berlin.de/terminvereinbarung/)
     * Update `target_url` in `myspider.py`
-    * Update `pushover` API credentials (1 week free)
+    * Update [https://pushover.net/](https://pushover.net/) API credentials (1 week free) in `myspider.py`
 
 ## Requirements & Setup:
 ```shell
