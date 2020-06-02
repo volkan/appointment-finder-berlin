@@ -37,5 +37,5 @@ $ docker-compose up
 
 ### Crontab
 ```shell
-* * * * * cd ~/projects/appointment-finder-berlin && /usr/local/bin/docker-compose up
+* * * * * cd ~/projects/appointment-finder-berlin/docker && /usr/local/bin/docker-compose up
 ```
