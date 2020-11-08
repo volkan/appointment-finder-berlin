@@ -1,9 +1,11 @@
 version: '2'
 
 services:
-  scraper_rakuten:
-    build: scrapy
+  scraper_appointment_finder:
+    build: ./docker/scrapy
+    env_file:
+      - ./.env
     volumes:
-       - ../:/scraper
+       - ./:/scraper
     working_dir: /scraper
     command: bash /scraper/docker/scrapy.sh

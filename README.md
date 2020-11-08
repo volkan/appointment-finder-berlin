@@ -20,22 +20,24 @@
     * Create an Application/API Token
     * Download mobile app and login.
 
-## How can I use:
+## How can I use it?
 
-    * Update `target_url` with office URL in `myspider.py`
-    * Update pushover API credentials in `myspider.py`
+    * Update `TARGET_URL` with office URL in `.env`
+    * Update pushover API credentials in `.env`
 
 ## Requirements & Setup:
 ```shell
 $ git clone https://github.com/volkan/appointment-finder-berlin.git
 Cloning into 'appointment-finder-berlin'...
 
-$ cd appointment-finder-berlin/docker
+$ cd appointment-finder-berlin
+$ cp .env.dist .env
+$ vi .env # for change, credentials, and URL
 $ docker-compose up
 
 ```
 
 ### Crontab
 ```shell
-* * * * * cd ~/projects/appointment-finder-berlin/docker && /usr/local/bin/docker-compose up
+* * * * * cd ~/projects/appointment-finder-berlin && /usr/local/bin/docker-compose up
 ```

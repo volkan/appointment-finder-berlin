@@ -1,9 +1,10 @@
 import scrapy
 import http.client, urllib
+import os
 
 class BerlinAnmeldungSpider(scrapy.Spider):
-    name = 'berlinspider'
-    target_url = 'https://service.berlin.de/terminvereinbarung/termin/tag.php?termin=1&dienstleister=122231&anliegen[]=120686&herkunft=1'
+    name = 'berlinspider'    
+    target_url = os.getenv('TARGET_URL')
     start_urls = [target_url]
 
 
@@ -21,8 +22,8 @@ class BerlinAnmeldungSpider(scrapy.Spider):
         conn = http.client.HTTPSConnection("api.pushover.net:443")
         conn.request("POST", "/1/messages.json",
         urllib.parse.urlencode({
-            "token": "pushover_token",
-            "user": "pushover_user",
+            "token": os.getenv('PUSHOVER_TOKEN'),
+            "user": os.getenv('PUSHOVER_USER'),
             "message": "I found an empty slot(s)" +  ' ' + " ".join(days) + ' ' + self.target_url,
         }), { "Content-type": "application/x-www-form-urlencoded" })
         conn.getresponse()
