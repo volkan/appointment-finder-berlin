@@ -5,7 +5,7 @@ from scrapy.utils.project import get_project_settings
 class BerlinAnmeldungSpider(scrapy.Spider):
     name = 'berlinspider'
     target_url = get_project_settings().get('TARGET_URL')
-    start_urls = [target_url]
+    start_urls = target_url.split(',')
 
 
     def parse(self, response):
