@@ -27,6 +27,7 @@
 
 ## Requirements & Setup:
 ```shell
+$ mkdir -p ~/projects/ && cd ~/projects/
 $ git clone https://github.com/volkan/appointment-finder-berlin.git
 Cloning into 'appointment-finder-berlin'...
 
