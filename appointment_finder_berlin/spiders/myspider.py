@@ -16,7 +16,7 @@ class BerlinAnmeldungSpider(scrapy.Spider):
             print("OK")
             print(":)")
             days = response.xpath("//div[@class='calendar-month-table span6']//tbody//a/text()").extract()
-            self.send_notification(days, response.url)
+            self.send_notification(days, " ".join(response.request.meta['redirect_urls']))
         else:
             print(":(")
 
