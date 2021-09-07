@@ -83,9 +83,11 @@ DOWNLOADER_MIDDLEWARES = {
     'appointment_finder_berlin.middlewares.AppointmentFinderBerlinDownloaderMiddleware': 543,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 90,
-    'scrapy_proxies.RandomProxy': 100,
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
 }
+
+if CUSTOM_PROXY is not None:
+    DOWNLOADER_MIDDLEWARES.update({'scrapy_proxies.RandomProxy': 100})
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
