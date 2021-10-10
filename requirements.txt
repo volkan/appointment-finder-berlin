@@ -1,3 +1,4 @@
 Scrapy
 ipython
 scrapy_proxies
+requests

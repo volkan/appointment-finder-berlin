@@ -8,4 +8,13 @@ services:
     volumes:
        - ./:/scraper
     working_dir: /scraper
-    command: bash /scraper/docker/scrapy.sh
+    command: bash /scraper/docker/scrapy.sh berlinspider
+
+  scraper_appointment_finder_immigration_office:
+      build: ./docker/scrapy
+      env_file:
+        - ./.env
+      volumes:
+         - ./:/scraper
+      working_dir: /scraper
+      command: bash /scraper/docker/scrapy.sh immigrationOffice
