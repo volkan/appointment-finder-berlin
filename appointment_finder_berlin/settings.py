@@ -36,7 +36,6 @@ RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 # 1 = Take only one proxy from the list and assign it to every requests
 # 2 = Put a custom proxy to use in the settings
 PROXY_MODE = 2
-
 # If proxy mode is 2 uncomment this sentence :
 CUSTOM_PROXY = os.getenv('CUSTOM_PROXY')
 
