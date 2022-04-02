@@ -15,10 +15,12 @@
 
     Pick office like [District office Friedrichshain - Kreuzberg](https://service.berlin.de/terminvereinbarung/termin/tag.php?termin=1&anliegen[]=120686&dienstleisterlist=122231,122243&herkunft=http%3A%2F%2Fservice.berlin.de%2Fdienstleistung%2F120686%2F) and copy the appointment URL
 
-2. Go to the [pushover service page](https://pushover.net/)
-    * Create an account (1 week free)
+2. Go to the [pushover service page](https://pushover.net/)    
+    * Create an account (1 month free)
     * Create an Application/API Token
     * Download mobile app and login.
+
+3. Create an instance via Oracle [always free](https://www.oracle.com/cloud/free/)
 
 ## How can I use it?
 
